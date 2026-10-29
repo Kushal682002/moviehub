@@ -1,3 +1,4 @@
+
 name: MovieHub CI
 
 on:
@@ -12,7 +13,7 @@ jobs:
 
     env:
       DB_PASSWORD: ci-test-password
-      JWT_SECRET: ci-test-secret-key-for-moviehub-only-0123456789abcdef
+      JWT_SECRET: Y2ktdGVzdC1zZWNyZXQta2V5LWZvci1tb3ZpZWh1Yi1vbmx5LTAxMjM0NTY3ODlhYmNkZWY=
       SPRING_DATASOURCE_URL: jdbc:mysql://127.0.0.1:3306/moviehub
       SPRING_DATASOURCE_USERNAME: root
 
