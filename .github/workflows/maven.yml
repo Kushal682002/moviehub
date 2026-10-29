@@ -1,21 +1,26 @@
+
 name: MovieHub CI
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: ["main", "master"]
   pull_request:
-    branches: [ "main", "master" ]
+    branches: ["main", "master"]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    env:
+      DB_PASSWORD: ci-test-password
+      JWT_SECRET: ci-test-secret-key-for-moviehub-only-0123456789abcdef
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Java 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: "21"
           distribution: "temurin"
